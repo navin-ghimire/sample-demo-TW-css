@@ -3,9 +3,8 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Home from './pages/Home';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
-import Page1 from './pages/nested-compo/Page1';
-import Page2 from './pages/nested-compo/Page2';
 import RootLayout from './components/RootLayout';
+import NotFound from './pages/NotFound';
 
 const App = () => {
 
@@ -26,6 +25,10 @@ const App = () => {
       {
         path:'contact-page',
         element: <ContactPage />
+      },
+      {
+        path:'*',
+        element: <NotFound />
       }
      ]
      
