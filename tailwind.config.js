@@ -1,13 +1,14 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./src/**/*.{html,js}"],
+const withMT = require("@material-tailwind/react/utils/withMT");
+module.exports = withMT({
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       backgroundColor: {
-        'rd':'#3FF300'
+        'rd': '#3F3D56'
       },
       animation: {
-       'bounce-slow': 'bounce 2s linear infinite',
+        'bounce-slow': 'bounce 2s linear infinite',
       },
     },
     screens: {
@@ -19,5 +20,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
-
+})
